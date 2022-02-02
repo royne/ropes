@@ -4,7 +4,7 @@ export const Container = styled.section`
   width: 100%;
   height: auto;
   padding: 20px 10%;
-  margin: 20px auto;
+  margin: 0 auto 30px auto;
   text-align: center;
 `
 

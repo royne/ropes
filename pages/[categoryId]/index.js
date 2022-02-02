@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useRouter} from 'next/router';
 import Layout from '../../components/layouts/home/Layout';
+import Breadcrumb from "../../components/layouts/home/Breadcrumb";
 import {Container, ContainerCategories} from '../../components/ui/home/category/category';
 import CardCategory from "../../components/home/CardCategory";
 
@@ -10,6 +11,7 @@ const Category = () => {
 
   return (
     <Layout>
+      <Breadcrumb router={router} />
       <Container>
         <h1>{categoryId}</h1>
         <ContainerCategories>

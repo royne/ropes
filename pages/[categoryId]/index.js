@@ -6,12 +6,12 @@ import CardCategory from "../../components/home/CardCategory";
 
 const Category = () => {
   const router = useRouter()
-  const {id} = router.query
+  const {categoryId} = router.query
 
   return (
     <Layout>
       <Container>
-        <h1>{id}</h1>
+        <h1>{categoryId}</h1>
         <ContainerCategories>
           <CardCategory />
           <CardCategory />

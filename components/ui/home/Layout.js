@@ -12,6 +12,7 @@ export const HeaderNav = styled.header`
   color: #ffffff;
   & > img {
     height: 80px;
+    cursor: pointer;
   }
 `;
 

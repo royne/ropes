@@ -14,8 +14,7 @@ const DivContainer = styled.div`
 const Content = styled.div`
   display: flex;
   width: 100%;
-  min-height: 100vh;
-  /* height: calc(100vh - 240px); */
+  min-height: calc(100vh - 300px);
   overflow: hidden;
   @media (max-width: 576px) {
     height: calc(100vh - 90px);

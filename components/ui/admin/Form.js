@@ -50,3 +50,28 @@ export const ImputSubmit = styled.input`
   }
 `;
 
+export const BoxInputCheckbox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+` 
+export const InputCheckbox = styled.div`
+  input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+  }
+  & > label {
+    position: relative;
+    margin-left: 5px;
+  }
+  & > label::after {
+    content: "";
+    height: 8px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+    transform: translateY(100%);
+    background: ${(props) => (props.bg ? props.bg : "")};
+  }
+`;

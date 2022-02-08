@@ -1,13 +1,16 @@
 import React from 'react';
+import Link from 'next/link';
 import {ContainerCard, CardImg} from '../ui/home/category/category';
 
-const CardCategory = () => {
+const CardCategory = ({product, category}) => {
   return ( 
     <ContainerCard>
       <CardImg>
-        procucto 
+        <Link href={`/[categoryId]/[productId]`} as={`/${category}/${product.id}`} >
+          <img src={product.image_url} /> 
+        </Link>
       </CardImg>
-      <span>nombre del producto</span>
+      <span>{product.name}</span>
     </ContainerCard>
    );
 }

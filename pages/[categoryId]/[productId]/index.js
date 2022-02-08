@@ -1,39 +1,63 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import {BASE_URL} from '../../../setings/config';
+import {css} from '@emotion/react';
 import Layout from "../../../components/layouts/home/Layout";
 import Breadcrumb from "../../../components/layouts/home/Breadcrumb";
 import {Container, ContainerProduct, BoxImg, BoxInfo} from '../../../components/ui/home/product';
 
 const Product = () => {
+  const [product, setProduct] = useState({})
+  const [activeImage, setActiveImage] = useState()
   const router = useRouter();
   const { productId } = router.query;
+
+  useEffect(() =>{
+    const getData = () => {
+      const url = `${BASE_URL}/products/${productId}`;
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          setProduct(data)
+          setActiveImage(data.photos[0])
+        });
+    } 
+    getData()
+  },[])
+
+  if(Object.keys(product).length === 0) return null
+
+  const handleActiveImage = (e) => setActiveImage(product.photos[e.target.id])
 
   return (
     <Layout>
       <Breadcrumb router={router} />
       <Container>
-        <h1>{productId}</h1>
+        <h1>{product.name}</h1>
         <ContainerProduct>
           <BoxImg>
-            <img src="/statics/img/product.jpg" />
-            <div>
-              <img src="" />
+            <img src={`${activeImage}`} alt="producto" />
+            <div className="box_photo_mini">
+              {product && product.photos.map((elm,i) => (
+                <img src={elm} alt="producto" id={i} key={i} onClick={handleActiveImage} />
+              ))}
             </div>
           </BoxImg>
           <BoxInfo>
-            <h3>Nombre Producto</h3>
+            <h3>{product.name}</h3>
+            <p>{product.description}</p>
+            <p><b>Ancho:</b> {product.dimension}</p>
             <p>
-              Usos: is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and.
+              <b>Colores:</b>
+              {product && product.colors.map((elm) => (
+                <span key={elm.id}> {elm.name}, </span>
+              ))}
             </p>
-            <p>Ancho: 150</p>
-            <p>Colores: </p>
             <div className="container_color">
-              COLORES:
-              <div className="box_color"></div>
-              <div className="box_color"></div>
+              <b>COLORES:</b>
+              {product && product.colors.map((elm) => (
+                <div className="box_color" css={css`background: ${elm.code};`} key={elm.id}></div>
+              ))}
             </div>
           </BoxInfo>
         </ContainerProduct>

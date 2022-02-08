@@ -34,6 +34,7 @@ const NewProduct = () => {
     const formData = new FormData();
     formData.append("product[name]", data.name);
     formData.append("product[description]", data.description);
+    formData.append("product[dimension]", data.dimension);
     formData.append("product[category_id]", data.category);
     formData.append("product[color_ids]", data.color_ids);
     data.photos.map((elm, i) => formData.append(`product[photos][${i}]`, elm));

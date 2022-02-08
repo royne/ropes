@@ -58,7 +58,7 @@ const Layout = (props) => {
           :root {
             --red: #EF3829; /* rojo */
             --white: #ffffff;
-            --grey1: #B4B2B2; /* gris claro*/
+            --gray1: #B4B2B2; /* gris claro*/
             --gray2: #908E8E; /* gris oscuro*/
             --black: #000000; /* negro */
           }

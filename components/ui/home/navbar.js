@@ -11,6 +11,7 @@ export const Nav = styled.nav`
   transition-delay: 2s;
   & > span {
     font-size: 16px;
+    cursor: pointer;
   }
 `;
 

@@ -12,18 +12,18 @@ const Product = () => {
   const router = useRouter();
   const { productId } = router.query;
 
-  useEffect(() =>{
-    const getData = () => {
-      const url = `${BASE_URL}/products/${productId}`;
-      fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
-          setProduct(data)
-          setActiveImage(data.photos[0])
-        });
-    } 
-    getData()
-  },[])
+  useEffect(() => {
+    if (productId) {
+      const getData = async () => {
+        const url = `${BASE_URL}/products/${productId}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        setProduct(data);
+        setActiveImage(data.photos[0]);
+      };
+      getData();
+    }
+  }, [productId]);
 
   if(Object.keys(product).length === 0) return null
 

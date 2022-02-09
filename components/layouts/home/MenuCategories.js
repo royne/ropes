@@ -22,7 +22,7 @@ const MenuCategories = () => {
     <ContainerMenuCategories>
       {categories &&
         categories.map((category) => (
-          <Link href={`/[categoryId]`} as={`/${category.id}`}>
+          <Link href={`/[categoryId]`} as={`/${category.name}`}>
             {category.name}
           </Link>
         ))}

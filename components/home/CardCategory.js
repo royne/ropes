@@ -6,7 +6,7 @@ const CardCategory = ({product, category}) => {
   return ( 
     <ContainerCard>
       <CardImg>
-        <Link href={`/[categoryId]/[productId]`} as={`/${category}/${product.id}`} >
+        <Link href={`/[categoryId]/[productId]`} as={`/${category}/${product.name}`} >
           <img src={product.image_url} /> 
         </Link>
       </CardImg>

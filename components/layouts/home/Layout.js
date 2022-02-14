@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import Header from "./Header";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
+import Whatsapp from "./Whatsapp";
 
 const DivContainer = styled.div`
   width: 100%;
@@ -119,6 +120,7 @@ const Layout = (props) => {
         <Content>
           <Main>{props.children}</Main>
         </Content>
+        <Whatsapp />
         <Footer />
       </DivContainer>
     </Fragment>

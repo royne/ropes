@@ -42,7 +42,9 @@ const NewProduct = () => {
       method: "POST",
       body: formData,
     });
-    const response = await request.json();
+    request.ok
+      ? alert("Producto creado con exito")
+      : alert("Ocurrio un error");
     setData({
       name: "",
       description: "",

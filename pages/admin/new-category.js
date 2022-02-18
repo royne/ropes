@@ -28,13 +28,15 @@ const NewCategory = () => {
     e.preventDefault();
     const url = `${BASE_URL}/categories`;
     const formData = new FormData();
-    formData.append("category[name]", data.name);
-    formData.append("category[image]", data.image);
+    if (data.name) formData.append("category[name]", data.name);
+    if (data.image) formData.append("category[image]", data.image);
     const request = await fetch(url, {
       method: "POST",
       body: formData,
     });
-    const response = await request.json();
+    request.ok
+      ? alert("Categoria creada con exito")
+      : alert("Ocurrio un error");
     setData({
       name: "",
       image: ""

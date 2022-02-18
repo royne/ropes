@@ -27,7 +27,9 @@ const NewColor = () => {
       method: "POST",
       body: formData,
     });
-    const response = await request.json();
+    request.ok
+      ? alert("Color creado con exito")
+      : alert("Ocurrio un error");
     setData({
       name: "",
       code: "",

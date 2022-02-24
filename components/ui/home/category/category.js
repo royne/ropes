@@ -55,3 +55,14 @@ export const ContainerMenuCategories = styled.div`
     color: var(--black);
   }
 `;
+
+export const BoxSub = styled.ul`
+  display: ${(props) => props.hide ? "block" : "none" };
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(110%);
+  width: 100px;
+  padding: 0 10px;
+  background: var(--gray1);
+`

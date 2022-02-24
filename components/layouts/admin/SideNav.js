@@ -41,6 +41,9 @@ const SideNav = () => {
             <Link href="/admin/new-category">Nueva Categoria</Link>
           </li>
           <li className="btn_sidenav">
+            <Link href="/admin/new-subcategory">Nueva Sub Categoria</Link>
+          </li>
+          <li className="btn_sidenav">
             <Link href="/admin/new-color">Nuevo Color</Link>
           </li>
         </ul>

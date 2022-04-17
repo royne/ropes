@@ -26,11 +26,11 @@ const MenuCategories = () => {
 
   return (
     <ContainerMenuCategories>
-      {categories &&
+      {categories ?
         categories.map((category) => {
           return (
             <div style={{ position: "relative" }}>
-              <div style={{ justifyContent: "space-between", display: "flex" }}>
+              <div style={{ justifyContent: "space-between", display: "flex", border: "1px solid var(--gray1)", paddingLeft:"20px" }}>
                 <Link
                   href={`/[categoryId]`}
                   as={`/${category.name}`}
@@ -57,7 +57,10 @@ const MenuCategories = () => {
               </BoxSub>}
             </div>
           );        
-      })}
+      })
+      :
+      <p>Cargando...</p>
+      }
     </ContainerMenuCategories>
   );
 }

@@ -42,12 +42,12 @@ export const ContainerMenuCategories = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 5% 15px;
+  /* padding: 5% 15px; */
   width: 200px;
-  height: 400px;
+  height: auto;
   transform: translateY(100%);
-  background: var(--gray1);
-  color: var(--black);
+  background: var(--gray3);
+  color: var(--red);
   display: flex;
   flex-direction: column;
   z-index: 10;
@@ -61,8 +61,9 @@ export const BoxSub = styled.ul`
   position: absolute;
   right: 0;
   top: 0;
-  transform: translateX(110%);
+  transform: translateX(100%);
   width: 100px;
   padding: 0 10px;
   background: var(--gray1);
+  color: var(--red);
 `

@@ -61,6 +61,7 @@ const Layout = (props) => {
             --white: #ffffff;
             --gray1: #B4B2B2; /* gris claro*/
             --gray2: #908E8E; /* gris oscuro*/
+            --gray3: #E1E0E2; /* gris claro2 */
             --black: #000000; /* negro */
           }
           html {

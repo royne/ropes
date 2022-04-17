@@ -32,10 +32,12 @@ export const BoxImg = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
     &>img{
       width: 30px;
       height: 30px;
       margin-left: 20px;
+      margin-bottom: 15px;
       box-shadow: 0 5px 10px rgba(0,0,0,0.5);
       cursor: pointer;
     }
@@ -50,11 +52,13 @@ export const BoxInfo = styled.div`
     display: flex;
     justify-content: left;
     align-items: center;
+    flex-wrap: wrap;
   } 
   .box_color {
     width: 20px;
     height: 20px;
     margin-right: 5px;
     margin-left: 5px;
+    margin-bottom: 10px;
   }
 `;

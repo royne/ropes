@@ -46,6 +46,9 @@ const SideNav = () => {
           <li className="btn_sidenav">
             <Link href="/admin/new-color">Nuevo Color</Link>
           </li>
+          <li className="btn_sidenav">
+            <Link href="/admin/messages">Mensajes</Link>
+          </li>
         </ul>
       </div>
     </BoxSideNav>

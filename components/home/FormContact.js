@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import {BASE_URL} from '../../setings/config'
 import { SectionFormContact, Form, BoxInput, BtnSubmit } from '../ui/home/contact'
 
 export const FormContact = () => {
@@ -9,6 +10,7 @@ export const FormContact = () => {
     phone: ''
   })
   const btnForm = useRef()
+  const formRef = useRef()
 
   const handleChange = (e) => {
     setData({
@@ -22,7 +24,7 @@ export const FormContact = () => {
     const url = `${BASE_URL}/messages`;
     const formData = new FormData();
     formData.append("message[name]", data.name);
-    formData.append("message[email]", data.emal);
+    formData.append("message[email]", data.email);
     formData.append("message[info]", data.info);
     formData.append("message[phone]", data.phone);
     const request = await fetch(url, {
@@ -38,12 +40,13 @@ export const FormContact = () => {
       info: '',
       phone: ''
     });
+    formRef.current.reset()
     btnForm.current.disabled = false;
   }
   return (
     <SectionFormContact>
       <h2>CONTACTANOS</h2>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} ref={formRef}>
         <BoxInput>
           <label>Nombre</label>
           <input type="text"  placeholder='Escribe tu nombre' onChange={handleChange} name="name"/>

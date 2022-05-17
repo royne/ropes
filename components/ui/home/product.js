@@ -13,6 +13,7 @@ export const ContainerProduct = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 50px;
 `
 
@@ -42,6 +43,10 @@ export const BoxImg = styled.div`
       cursor: pointer;
     }
   }
+  @media (max-width: 570px){
+    width: 100%;
+    margin-bottom: 80px;
+  }
 `;
 
 export const BoxInfo = styled.div`
@@ -60,5 +65,8 @@ export const BoxInfo = styled.div`
     margin-right: 5px;
     margin-left: 5px;
     margin-bottom: 10px;
+  }
+  @media (max-width: 570px){
+    width: 100%;
   }
 `;

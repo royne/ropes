@@ -18,11 +18,15 @@ export const BoxShops = styled.article`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 3%;
   background: var(--gray1);
   &>iframe{
     width: 400px;
     height: 400px;
+  }
+  @media (max-width: 576px) {
+    width: 100%;
   }
 `
 export const BoxInfoShops = styled.div`
@@ -41,6 +45,11 @@ export const BoxInfoShops = styled.div`
     font-size: 42px;
     font-weight: bold;
     margin-bottom: 20px;
+  }
+  @media (max-width: 576px) {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
 
 `

@@ -17,6 +17,9 @@ export const BoxContact = styled.section`
     margin-bottom: 50px;
     font-family: Baskerville-bold;
   }
+   @media (max-width: 576px){
+    width: 80%;
+  }
 `
 
 
@@ -61,6 +64,9 @@ export const SectionFormContact = styled.section`
 `
 export const Form = styled.form`
   width: 50%;
+  @media (max-width: 576px){
+    width: 90%;
+  }
 `
 export const BoxInput = styled.div`
   display: flex;

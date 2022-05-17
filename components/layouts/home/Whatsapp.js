@@ -8,6 +8,9 @@ const WhatsappImg = styled.img`
   width: 50px;
   height: 50px;
   cursor: pointer;
+   @media (max-width: 576px){
+    bottom: 170px;
+  }
 `
 
 const Whatsapp = () => {

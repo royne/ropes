@@ -10,6 +10,9 @@ import Whatsapp from "./Whatsapp";
 const DivContainer = styled.div`
   width: 100%;
   padding: 0 15%;
+  @media (max-width: 576px){
+    padding: 0;
+  }
 `
 
 const Content = styled.div`
@@ -18,7 +21,8 @@ const Content = styled.div`
   min-height: calc(100vh - 300px);
   overflow: hidden;
   @media (max-width: 576px) {
-    height: calc(100vh - 90px);
+    padding: 0 2%;
+    height: calc(100vh - 300px);
   }
 `;
 

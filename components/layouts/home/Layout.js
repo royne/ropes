@@ -84,17 +84,17 @@ const Layout = (props) => {
           h3 {
             margin: 0 0 2rem 0;
             line-height: 1.5;
+            font-family: Baskerville-bold !important;
           }
           h1,
           h2 {
-            font-family: "arial", serif;
             font-weight: 700;
           }
-          h3 {
-            font-family: "helvetica", sans-serif;
+          span{
+            font-family: Baskerville-Regular;
           }
           p {
-            font-family: "helvetica", sans-serif;
+            font-family: Baskerville-Regular
           }
           ul {
             list-style: none;

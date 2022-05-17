@@ -4,6 +4,7 @@ export const SecContact = styled.section`
   width: 100%;
   min-height: 68vh;
   display: flex;
+  margin-top: 50px;
 `
 
 export const BoxContact = styled.section`
@@ -14,6 +15,7 @@ export const BoxContact = styled.section`
   .box_info>h1{
     text-align: center;
     margin-bottom: 50px;
+    font-family: Baskerville-bold;
   }
 `
 

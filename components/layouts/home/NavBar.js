@@ -13,11 +13,15 @@ const NavBar = () => {
 
   return (
     <div>
-      <BurgerBtn onClick={handleHide}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </BurgerBtn>
+      {hideMenu ? 
+        <img src='/statics/img/x.svg' style={{ width: 25, cursor:"pointer" }} onClick={handleHide} />
+      :
+        <BurgerBtn onClick={handleHide}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </BurgerBtn>
+      }
       {hideMenu && (
         <Nav>
           <Link href="/">

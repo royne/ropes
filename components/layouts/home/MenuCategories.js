@@ -24,27 +24,28 @@ const MenuCategories = () => {
   }
   console.log(categories)
 
+  const hoverElement = e => e.target.style.color = "red";
+  const hideHoveElement = e => e.target.style.color = "black";
+
   return (
     <ContainerMenuCategories>
       {categories ?
         categories.map((category) => {
           return (
             <div style={{ position: "relative" }}>
-              <div style={{ justifyContent: "space-between", display: "flex", border: "1px solid var(--gray1)", paddingLeft:"20px" }}>
+              <div style={{justifyContent:"left" ,display:"flex",paddingLeft:"30px"}} onMouseOver={hoverElement} onMouseOut={hideHoveElement}>
                 <Link
                   href={`/[categoryId]`}
                   as={`/${category.name}`}
                   key={category.id}
                 >
-                  <span>{category.name}</span>
+                  <span style={{paddingRight:10}} >{category.name}</span>
                 </Link>
                 {category.sub_categories.length !== 0 && (
-                  <small onClick={handleHideSub} onMouseEnter={handleHideSub} id={category.id}>
-                    >>
-                  </small>
+                  <img src="/statics/img/red.svg" style={{ width: 10 }} onClick={handleHideSub} onMouseEnter={handleHideSub} id={category.id}/>
                 )}
               </div>
-              {idSub === category.id && <BoxSub hide={showSub} onMouseLeave={handleHideSub} id={category.id}>
+              {idSub === category.id && <BoxSub hide={showSub} onMouseLeave={handleHideSub} id={category.id} onMouseOver={hoverElement} onMouseOut={hideHoveElement}>
                 {category.sub_categories.map((sub, i) => {
                   return (
                     <li key={i}>

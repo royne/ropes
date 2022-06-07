@@ -5,6 +5,7 @@ import Layout from '../../components/layouts/home/Layout';
 import Breadcrumb from "../../components/layouts/home/Breadcrumb";
 import {Container, ContainerCategories} from '../../components/ui/home/category/category';
 import CardCategory from "../../components/home/CardCategory";
+import ImageCategories from '../../components/home/ImageCategories';
 
 const Category = () => {
   const [category, setCategory] = useState({})
@@ -33,7 +34,7 @@ const Category = () => {
         <ContainerCategories>
           {category && category.products.map((elm) => <CardCategory product={elm} category={category.name} /> )}
         </ContainerCategories>
-        <img src="/statics/img/categories/other.jpg" />
+        <ImageCategories text={category.name} />
       </Container>
     </Layout>
   );

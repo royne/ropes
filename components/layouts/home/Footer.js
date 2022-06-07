@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FooterConatiner } from "../../ui/home/Layout";
 
 const Footer  = () => {
@@ -11,7 +12,9 @@ const Footer  = () => {
       </div>
       <div className="box_footer box_social">
         <span className="btn_footer">Siguenos en</span>
-        <img src="/statics/img/facebook.png" />
+        <Link href={"https://www.facebook.com/reatasylonas"}>
+          <img src="/statics/img/facebook.png" style={{ cursor: "pointer" }}/>
+        </Link>
       </div>
       <p>© Todos los derechos reservados a Reatas & Lonas</p>
     </FooterConatiner>

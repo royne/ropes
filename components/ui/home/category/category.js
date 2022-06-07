@@ -42,15 +42,19 @@ export const ContainerMenuCategories = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
   /* padding: 5% 15px; */
   width: 200px;
   height: auto;
   transform: translateY(100%);
-  background: var(--gray3);
-  color: var(--red);
+  background: var(--white);
+  color: var(--black);
   display: flex;
   flex-direction: column;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
   z-index: 10;
+  text-transform: capitalize;
   &>a{
     color: var(--black);
   }
@@ -62,8 +66,9 @@ export const BoxSub = styled.ul`
   right: 0;
   top: 0;
   transform: translateX(100%);
-  width: 100px;
+  width: 200px;
   padding: 0 10px;
-  background: var(--gray1);
-  color: var(--red);
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 `

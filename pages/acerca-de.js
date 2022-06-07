@@ -27,7 +27,7 @@ export default function About() {
               <p>Procuramos tener un ambiente calido y cercano</p>
             </div>
           </BoxRow>
-          <div>imagen</div>
+          <div><img src="/statics/img/team.svg" style={{width:100}}/></div>
           <BoxRow>
             <div className='text-box'>
               <h3>Cumplimiento</h3>

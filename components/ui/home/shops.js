@@ -21,12 +21,14 @@ export const BoxShops = styled.article`
   flex-wrap: wrap;
   padding: 3%;
   background: var(--gray1);
+  box-sizing: content-box;
   &>iframe{
-    width: 400px;
-    height: 400px;
+    width: 280px;
+    height: 280px;
   }
   @media (max-width: 576px) {
     width: 100%;
+    justify-content: center;
   }
 `
 export const BoxInfoShops = styled.div`
@@ -37,12 +39,12 @@ export const BoxInfoShops = styled.div`
   align-items: center;
 
   &>img{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     margin-bottom: 20px;
   }
   &>h2{
-    font-size: 42px;
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
   }

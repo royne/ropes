@@ -29,8 +29,6 @@ const EditProduct = () => {
     }
   }, [id]);
 
-  console.log(product);
-
   const handleChange = (e) => {
     setProduct({
       ...product,

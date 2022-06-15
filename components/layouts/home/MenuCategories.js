@@ -12,7 +12,6 @@ const MenuCategories = () => {
     setIdSub(parseInt(e.target.getAttribute("id")));
     setShowSub(!showSub);
   }
-  console.log(categories)
 
   const hoverElement = e => e.target.style.color = "red";
   const hideHoveElement = e => e.target.style.color = "black";

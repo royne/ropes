@@ -1,23 +1,13 @@
-import React from 'react';
-import Link from 'next/link';
 import {useState, useEffect} from 'react';
-import { BASE_URL } from "../../../setings/config";
+import Link from 'next/link';
+import {useMenu} from '../../../context/categoriesContext'
 import { ContainerMenuCategories, BoxSub } from "../../ui/home/category/category";
 
 const MenuCategories = () => {
-  const [categories, setCategories] = useState([])
   const [showSub, setShowSub] = useState(false);
   const [idSub, setIdSub] = useState();
+  const categories = useMenu()
 
-  useEffect(() => {
-    const getData = () => {
-      const url = `${BASE_URL}/categories?parents=true`;
-      fetch(url)
-        .then((response) => response.json())
-        .then((data) => setCategories(data));
-    } 
-    getData()
-  }, [])
   const handleHideSub = (e) => {
     setIdSub(parseInt(e.target.getAttribute("id")));
     setShowSub(!showSub);
@@ -36,7 +26,7 @@ const MenuCategories = () => {
               <div style={{justifyContent:"left" ,display:"flex",paddingLeft:"30px"}} onMouseOver={hoverElement} onMouseOut={hideHoveElement}>
                 <Link
                   href={`/[categoryId]`}
-                  as={`/${category.name}`}
+                  as={`/${category.public_url}`}
                   key={category.id}
                 >
                   <span style={{paddingRight:10}} >{category.name}</span>
@@ -49,8 +39,8 @@ const MenuCategories = () => {
                 {category.sub_categories.map((sub, i) => {
                   return (
                     <li key={i}>
-                      <Link href={`/[categoryId]`} as={`/${sub}`} key={sub}>
-                        <small>{sub}</small>
+                      <Link href={`/[categoryId]`} as={`/${sub.public_url}`} key={sub}>
+                        <small>{sub.name}</small>
                       </Link>
                     </li>
                   );

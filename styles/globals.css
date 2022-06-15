@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Baskerville-bold';
-  src: url('../public/fonts/LibreBaskerville-Bold.otf');
+  src: url('../public/fonts/Optima/OptimaLTPro-Bold.otf');
 }
 @font-face {
   font-family: 'Baskerville-Regular';
-  src: url('../public/fonts/LibreBaskerville-Regular.otf');
+  src: url('../public/fonts/Optima/OptimaLTPro-Italic.otf');
 }

@@ -15,6 +15,9 @@ const Footer  = () => {
         <Link href={"https://www.facebook.com/reatasylonas"}>
           <img src="/statics/img/facebook.png" style={{ cursor: "pointer" }}/>
         </Link>
+        <Link href={"https://www.instagram.com/reatasylonasbogota"}>
+          <img src="/statics/img/instagram.svg" style={{ cursor: "pointer", marginLeft:10, filter:"revert" }}/>
+        </Link>
       </div>
       <p>© Todos los derechos reservados a Reatas & Lonas</p>
     </FooterConatiner>

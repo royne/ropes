@@ -48,6 +48,7 @@ const EditProduct = () => {
     const url = `${BASE_URL}/products/${id}`;
     const formData = new FormData();
     if (data.name) formData.append("product[name]", data.name);
+    if (data.public_url) formData.append("product[public_url]", data.public_url);
     if (data.description) formData.append("product[description]", data.description);
     if (data.dimension) formData.append("product[dimension]", data.dimension);
     if (data.category) formData.append("product[category_id]", data.category);
@@ -106,6 +107,17 @@ const EditProduct = () => {
                   name="name"
                   onChange={handleChange}
                   value={product.name}
+                />
+              </BoxField>
+              <BoxField>
+                <label htmlFor="nombre">Url</label>
+                <input
+                  type="text"
+                  id="public_url"
+                  placeholder="url (abc-def)"
+                  name="public_url"
+                  onChange={handleChange}
+                  value={product.public_url}
                 />
               </BoxField>
               <BoxField>

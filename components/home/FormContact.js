@@ -45,7 +45,7 @@ export const FormContact = () => {
   }
   return (
     <SectionFormContact>
-      <h2>CONTACTANOS</h2>
+      <h2>CONTÁCTANOS</h2>
       <Form onSubmit={handleSubmit} ref={formRef}>
         <BoxInput>
           <label>Nombre</label>

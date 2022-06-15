@@ -34,7 +34,7 @@ const NavBar = () => {
             `}
             onClick={handleCategories}
           >
-            CATALOGO
+            CATÁLOGO
             {activeMenu && <MenuCategories activeMenu={activeMenu} />}
           </span>
           <Link href="/acerca-de">

@@ -9,6 +9,7 @@ import useCategories from "../../hooks/useCategories";
 const NewProduct = () => {
   const [data, setData] = useState({
     name: "",
+    public_url:"",
     description: "",
     dimension: "",
     category: "",
@@ -33,6 +34,7 @@ const NewProduct = () => {
     const url = `${BASE_URL}/products`;
     const formData = new FormData();
     formData.append("product[name]", data.name);
+    formData.append("product[public_url]", data.public_url);
     formData.append("product[description]", data.description);
     formData.append("product[dimension]", data.dimension);
     formData.append("product[category_id]", data.category);
@@ -47,6 +49,7 @@ const NewProduct = () => {
       : alert("Ocurrio un error");
     setData({
       name: "",
+      public_url:"",
       description: "",
       dimension: "",
       category: "",
@@ -94,6 +97,17 @@ const NewProduct = () => {
                   name="name"
                   onChange={handleChange}
                   value={data.name}
+                />
+              </BoxField>
+              <BoxField>
+                <label htmlFor="nombre">Url</label>
+                <input
+                  type="text"
+                  id="public_url"
+                  placeholder="url (abc-def)"
+                  name="public_url"
+                  onChange={handleChange}
+                  value={data.public_url}
                 />
               </BoxField>
               <BoxField>

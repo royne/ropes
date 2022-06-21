@@ -39,7 +39,7 @@ const Category = () => {
         <ContainerCategories>
           {category && category.products.map((elm) => <CardCategory product={elm} category={category.public_url} /> )}
         </ContainerCategories>
-        <ImageCategories text={category.name} />
+        <ImageCategories text={category.public_url} />
       </Container>
     </Layout>
   );

@@ -1,6 +1,6 @@
 
 const ImageCategories = ({text}) => {
-  const reatas = ["reatas", "cintas", "velcros", "reflectivos", "herrajes", "pegantes", "espumas", "colchonetas", "almohadas"]
+  const reatas = ["reatas", "cintas", "velcros", "reflectivos", "herrajes", "pegantes", "espumas", "colchonetas", "almohadas", "reatas-en-poliester", "reatas-tipo-seguridad", "reatas-acanaladas", "otras-reatas", "espumas-troqueladas", ]
   const other = ["cremalleras", "slyder"]
 
   const CompenentImage = () => {
